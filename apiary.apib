@@ -48,11 +48,30 @@ GET /switchonl1.py
 { "s1": "on" }
 
 --
-Switch on light1
+Switch on light2
 --
 
 GET /switchonl2.py
 < 200
 < Content-Type: application/json
 { "s2": "on" }
+
+--
+Switch off light1
+--
+
+GET /switchoffl1.py
+< 200
+< Content-Type: application/json
+{ "s1": "off" }
+
+--
+Switch off light2
+--
+
+GET /switchoffl2.py
+< 200
+< Content-Type: application/json
+{ "s2": "off" }
+
 

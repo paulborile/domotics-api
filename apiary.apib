@@ -8,26 +8,12 @@ Domotic app API
 Infixit Box resources
 The following is a section of resources related to the shopping cart
 --
-Demo version - Returns heat map matrix from infrared sensor
-
-GET /script_def.py
-< 200
-< Content-Type: application/json
-{ "v1": 23, "v2": 24, "v3" : 23, "v4" : 25, "v5": 23, "v6": 24, "v7" : 23, "v8" : 25 }
-
-
---
-Infixit Box resources
-The following is a section of resources related to the shopping cart
---
 Returns heat map matrix from infrared sensor
 
-GET /sensor-heatmap
-> Content-Type: application/json
-{ "sensorid": "s1" }
+GET /heatmap.py
 < 200
 < Content-Type: application/json
-{ "sensortemp" : 23.4, heatmaprow
+{ "sensortemp" : 23.4, "heatmaprow" :
     { "v1": 23, "v2": 24, "v3" : 23, "v4" : 25, "v5": 23, "v6": 24, "v7" : 23, "v8" : 25 }
 }
 
@@ -36,11 +22,9 @@ Generic commands to sensors by id. Foreseen commands :
 1 - switchon
 2 - switchoff
 
-POST /sensor-cmd
-> Content-Type: application/json
-{ "sensorid": "s1", "cmd": 1 }
+POST /read-lights
 < 200
 < Content-Type: application/json
-{ "status": "on }
+{ "s1": "on",  "s2" : "off" }
 
 

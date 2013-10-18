@@ -4,13 +4,25 @@ HOST: http://www.google.com/
 ---
 Domotic app API
 ---
+--
+Infixit Box resources
+The following is a section of resources related to the shopping cart
+--
+Demo version - Returns heat map matrix from infrared sensor
+
+GET /script_def.py
+< 200
+< Content-Type: application/json
+{ "v1": 23, "v2": 24, "v3" : 23, "v4" : 25, "v5": 23, "v6": 24, "v7" : 23, "v8" : 25 }
+
 
 --
 Infixit Box resources
 The following is a section of resources related to the shopping cart
 --
 Returns heat map matrix from infrared sensor
-POST /sensor-heatmap
+
+GET /sensor-heatmap
 > Content-Type: application/json
 { "sensorid": "s1" }
 < 200
